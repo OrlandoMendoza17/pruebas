@@ -9,3 +9,9 @@ const info = {
 const links = getCalendarLinks(info)
 console.log("links:", links)
 
+let list = [{ TIPO: "JE" }]
+
+list = list.reduce((accumulator, currentValue) => accumulator + `,${currentValue.TIPO}`).split(",")
+list.shift()
+
+const tipos = [...new Set(array)]
