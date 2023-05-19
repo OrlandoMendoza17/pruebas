@@ -6,5 +6,11 @@ const info = {
   informacion_titulo: "John Freddy Vega"
 }
 
-const links = getCalendarLinks(info)
+const infoFormat = {
+  title: info.informacion_titulo,
+  start: info.informacion_fechaPublicacion,
+  end: info.informacion_fechaExpiracion,
+}
+
+const links = getCalendarLinks(infoFormat)
 console.log("links:", links)

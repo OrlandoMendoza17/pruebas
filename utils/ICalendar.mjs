@@ -14,14 +14,9 @@ const getCalendarInfo = (calendarInfo) => {
   }
 }
 
-export const getCalendarLinks = (info) => {
-  const { informacion_titulo, informacion_fechaPublicacion, informacion_fechaExpiracion } = info
+export const getCalendarLinks = (infoFormat) => {
 
-  const calendarInfo = getCalendarInfo({
-    title: informacion_titulo,
-    start: informacion_fechaPublicacion,
-    end: informacion_fechaExpiracion,
-  })
+  const calendarInfo = getCalendarInfo(infoFormat)
 
   const calendar = new ICalendar(calendarInfo)
 
